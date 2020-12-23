@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+    User Page
+{% endblock %}
+{% block body %}
+    {% for user in users %}
+        <div>{{ user }}</div>
+    {% endfor %}
+    <hr>
+    <form method="post">
+        {% for field in form %}
+            <div>
+                {% if field != form.save %}
+                    {{ field.label }}:
+                {% endif %}
+                {{ field }}</div>
+            {% if field.errors %}
+                <div style="font-size: 10px; color: red">{{ field.errors[0] }}</div>
+            {% endif %}
+        {% endfor %}
+
+    </form>
+
+{% endblock %}

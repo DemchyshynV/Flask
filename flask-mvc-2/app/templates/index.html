@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if boolean %}
+
+        <div>Hello from child</div>
+        {% else %}
+        <div>False</div>
+    {% endif %}
+    {% for user in users %}
+        <div>{{ user }}</div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block name %}
+sdfsdfsfsdfsdf
+{% endblock %}

@@ -1,0 +1,6 @@
+<div *ngIf="products">
+  <div *ngFor="let product of products">
+    id: {{product.id}} - name: {{product.name}} - cost: {{product.cost}}
+    <button (click)="del(product.id)">Delete</button>
+  </div>
+</div>
